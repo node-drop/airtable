@@ -1,0 +1,17 @@
+{
+  "name": "@node-drop/airtable",
+  "version": "1.0.0",
+  "description": "Airtable integration for Node-Drop",
+  "main": "index.js",
+  "keywords": [
+    "airtable",
+    "database",
+    "records",
+    "automation"
+  ],
+  "author": "Node-Drop",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
