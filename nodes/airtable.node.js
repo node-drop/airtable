@@ -23,6 +23,20 @@ const AirtableNode = {
   group: ["communication", "airtable", "database"],
   version: 1,
   description: "Interact with Airtable bases, tables, and records",
+  ai: {
+    description: "Manage Airtable records (Create, Read, Update, Delete) and Bases.",
+    useCases: [
+      "Add new leads from a form",
+      "Update record status",
+      "Fetch records for a specific view"
+    ],
+    tags: ["airtable", "record", "database", "sheet"],
+    rules: [
+      "Requires Base ID and Table Name",
+      "Fields must be a valid JSON object"
+    ],
+    complexityScore: 2
+  },
   icon: "file:icon.svg",
   color: "#eee",
   defaults: {

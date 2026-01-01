@@ -15,6 +15,19 @@ const AirtableTriggerNode = {
   group: ["trigger", "airtable"],
   version: 1,
   description: "Trigger on Airtable record changes",
+  ai: {
+    description: "Trigger workflow when records are created/updated in Airtable.",
+    useCases: [
+      "Sync new records to another DB",
+      "Send email when record status changes"
+    ],
+    tags: ["airtable", "trigger", "watch", "polling"],
+    rules: [
+      "Uses polling mechanism",
+      "Minimum poll interval is 30s"
+    ],
+    complexityScore: 2
+  },
   icon: "file:icon.svg",
   color: "#eee",
   defaults: {
@@ -115,7 +128,7 @@ const AirtableTriggerNode = {
     },
   ],
 
-  async trigger(inputData) {
+  async execute(inputData) {
     const baseId = this.getNodeParameter("baseId");
     const tableName = this.getNodeParameter("tableName");
     const pollingInterval = this.getNodeParameter("pollingInterval", 60);
